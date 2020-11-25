@@ -309,7 +309,7 @@ function correct(a, b) {
     case 2:
       var p1 = document.createElement('p');
       var img = document.createElement('img');
-      img.src = 'img/1.JPG';
+      img.src = 'img/1.jpg';
       img.style.width = '100%';
       p1.appendChild(img);
       p1.appendChild(document.createElement('br'));
@@ -325,7 +325,7 @@ function correct(a, b) {
     case 3:
       var p1 = document.createElement('p');
       var img = document.createElement('img');
-      img.src = 'img/4.JPG';
+      img.src = 'img/4.jpg';
       img.style.width = '100%';
       p1.appendChild(img);
       p1.appendChild(document.createElement('br'));
@@ -341,7 +341,7 @@ function correct(a, b) {
     case 4:
       var p1 = document.createElement('p');
       var img = document.createElement('img');
-      img.src = 'img/15.JPG';
+      img.src = 'img/15.jpg';
       img.style.width = '100%';
       p1.appendChild(img);
       p1.appendChild(document.createElement('br'));
@@ -353,7 +353,7 @@ function correct(a, b) {
     case 5:
       var p1 = document.createElement('p');
       var img = document.createElement('img');
-      img.src = 'img/24.JPG';
+      img.src = 'img/24.jpg';
       img.style.width = '100%';
       p1.appendChild(img);
       p1.appendChild(document.createElement('br'));
@@ -365,7 +365,7 @@ function correct(a, b) {
     case 6:
       var p1 = document.createElement('p');
       var img = document.createElement('img');
-      img.src = 'img/22.JPG';
+      img.src = 'img/22.jpg';
       img.style.width = '100%';
       p1.appendChild(img);
       p1.appendChild(document.createElement('br'));
@@ -383,7 +383,7 @@ function correct(a, b) {
     case 7:
       var p1 = document.createElement('p');
       var img = document.createElement('img');
-      img.src = 'img/18.JPG';
+      img.src = 'img/18.jpg';
       img.style.width = '100%';
       p1.appendChild(img);
       p1.appendChild(document.createElement('br'));
@@ -395,7 +395,7 @@ function correct(a, b) {
     case 8:
       var p1 = document.createElement('p');
       var img = document.createElement('img');
-      img.src = 'img/21.JPG';
+      img.src = 'img/21.jpg';
       img.style.width = '100%';
       p1.appendChild(img);
       p1.appendChild(document.createElement('br'));
@@ -411,7 +411,7 @@ function correct(a, b) {
     case 9:
       var p1 = document.createElement('p');
       var img = document.createElement('img');
-      img.src = 'img/23.JPG';
+      img.src = 'img/23.jpg';
       img.style.width = '100%';
       p1.appendChild(img);
       p1.appendChild(document.createElement('br'));
