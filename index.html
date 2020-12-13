@@ -16,29 +16,35 @@
     <div class="w3-padding-large w3-xlarge" style="font-weight: 900;">
       交通安全模擬試題
     </div>
-	
-	<div id='answerBlock' class="w3-row w3-container">
-		<div id='answer' class="w3-display-right w3-large ansPC" style="display: none;">
-		  <h2 class="w3-animate-right" style="font-weight:bold;">
-			正解！！！
-		  </h2>
-		  <div id="explanation" class="w3-animate-right"></div>
-		</div>
-	</div>
-	
-	<div class="w3-row w3-container ">
-		<div id="quiz" class="w3-display-middle">
-		  <p id="QS" class="w3-animate-top w3-xxlarge" style="font-weight: 700;"><span id='situation'></span></p>
-		  <hr id="QH">
-		  <div id="QB" class="w3-animate-top">
-			<button id="btnA" class="w3-pale-green w3-hover-blue-grey w3-round-large w3-block w3-left-align" onclick="check(n, 'A')"><span id='optionA'></button>
-			<button id="btnB" class="w3-pale-green w3-hover-blue-grey w3-round-large w3-block w3-left-align" onclick="check(n, 'B')"><span id='optionB'></button>
-			<button id="btnC" class="w3-pale-green w3-hover-blue-grey w3-round-large w3-block w3-left-align" onclick="check(n, 'C')"><span id='optionC'></button>
-			<button id="btnD" class="w3-pale-green w3-hover-blue-grey w3-round-large w3-block w3-left-align" onclick="check(n, 'D')"><span id='optionD'></button>
-			<button class="w3-blue w3-hover-indigo w3-round-large w3-block w3-left-align btnNext" onclick="next()" disabled id="next" style="display:none;"><center>下一題</center></button>
-		  </div>
-		</div>
-	</div>
+
+    <div id='feedback' class="w3-row w3-container" style='display: none;'>
+      <iframe class="w3-display-middle" src="https://docs.google.com/forms/d/e/1FAIpQLSerqNhZhWVzBcmbEiXFgbZ_4TR0xMwAD1VMLUGA-kjtmy3JKA/viewform?embedded=true" width="100%" height="70%" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+    </div>
+
+    <div id='answerBlock' class="w3-row w3-container">
+      <div id='answer' class="w3-display-right w3-large ansPC" style="display: none;">
+        <h2 class="w3-animate-right" style="font-weight:bold;">
+          正解！！！
+        </h2>
+        <div id="explanation" class="w3-animate-right"></div>
+      </div>
+    </div>
+
+    <div class="w3-row w3-container ">
+      <div id="quiz" class="w3-display-middle">
+        <p id="QS" class="w3-animate-top w3-xxlarge" style="font-weight: 700;"><span id='situation'></span></p>
+        <hr id="QH">
+        <div id="QB" class="w3-animate-top">
+          <button id="btnA" class="w3-pale-green w3-hover-blue-grey w3-round-large w3-block w3-left-align" onclick="check(n, 'A')"><span id='optionA'></button>
+          <button id="btnB" class="w3-pale-green w3-hover-blue-grey w3-round-large w3-block w3-left-align" onclick="check(n, 'B')"><span id='optionB'></button>
+          <button id="btnC" class="w3-pale-green w3-hover-blue-grey w3-round-large w3-block w3-left-align" onclick="check(n, 'C')"><span id='optionC'></button>
+          <button id="btnD" class="w3-pale-green w3-hover-blue-grey w3-round-large w3-block w3-left-align" onclick="check(n, 'D')"><span id='optionD'></button>
+          <button class="w3-blue w3-hover-indigo w3-round-large w3-block w3-left-align btnNext" onclick="next()" disabled id="next" style="display:none;">
+            <center>下一題</center>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <div id="safooter" class="bottomleft w3-padding-large" style="font-weight:400; color:gray;">
       國立東華大學 學生自治會 | Students ​Association​, National Dong Hwa University</a>

@@ -1,69 +1,90 @@
 // RWD START
 var status = "quiz";
 mobileChange();
-window.onresize = function(){mobileChange();}
+window.onresize = function()
+{
+  mobileChange();
+}
 
-function mobileChange(){
+function mobileChange()
+{
   var pMatchMedia = window.matchMedia("(max-width: 768px)");
-  if(status=="correct"){correctChange(pMatchMedia);}
-  if(status=="quiz"){nextChange(pMatchMedia);}
-  if (pMatchMedia.matches) {
+  if (status == "correct")
+  {
+    correctChange(pMatchMedia);
+  }
+  if (status == "quiz")
+  {
+    nextChange(pMatchMedia);
+  }
+  if (pMatchMedia.matches)
+  {
     //小於768時執行的js
-	document.getElementById("answer").classList.remove('w3-display-right');
-	document.getElementById("answer").classList.remove('ansPC');
-	document.getElementById("quiz").classList.remove('w3-display-middle');
-	document.getElementById("safooter").classList.remove('bottomleft');
-  }else {
+    document.getElementById("answer").classList.remove('w3-display-right');
+    document.getElementById("answer").classList.remove('ansPC');
+    document.getElementById("quiz").classList.remove('w3-display-middle');
+    document.getElementById("safooter").classList.remove('bottomleft');
+  }
+  else
+  {
     //大於768時執行的js
-	document.getElementById("answer").classList.add('w3-display-right');
-	document.getElementById("answer").classList.add('ansPC');
-	document.getElementById("quiz").classList.add('w3-display-middle');
-	document.getElementById("safooter").classList.add('bottomleft');
-	document.getElementById("answerBlock").classList.remove('w3-teal');
+    document.getElementById("answer").classList.add('w3-display-right');
+    document.getElementById("answer").classList.add('ansPC');
+    document.getElementById("quiz").classList.add('w3-display-middle');
+    document.getElementById("safooter").classList.add('bottomleft');
+    document.getElementById("answerBlock").classList.remove('w3-teal');
   }
 }
 
-function correctChange(pMatchMedia){
-  if (pMatchMedia.matches) {
+function correctChange(pMatchMedia)
+{
+  if (pMatchMedia.matches)
+  {
     //小於768時執行的js
-	scrollTo(0,0);
-	document.getElementById("answerBlock").classList.add('w3-teal');
-	document.getElementById("quiz").classList.remove('w3-display-left');
-	document.getElementById("QS").classList.remove('w3-animate-right');
-	document.getElementById("QB").classList.remove('w3-animate-right');
-	document.getElementById("quiz").style.width = '100%';
-	document.getElementById("quiz").style.marginLeft = '0';
-	document.getElementById("quiz").style.marginRight = '0';
-  }else {
+    scrollTo(0, 0);
+    document.getElementById("answerBlock").classList.add('w3-teal');
+    document.getElementById("quiz").classList.remove('w3-display-left');
+    document.getElementById("QS").classList.remove('w3-animate-right');
+    document.getElementById("QB").classList.remove('w3-animate-right');
+    document.getElementById("quiz").style.width = '100%';
+    document.getElementById("quiz").style.marginLeft = '0';
+    document.getElementById("quiz").style.marginRight = '0';
+  }
+  else
+  {
     //大於768時執行的js
-	document.getElementById("quiz").classList.remove('w3-display-middle');
-	document.getElementById("quiz").classList.add('w3-display-left');
-	document.getElementById("quiz").style.width = '50%';
-	document.getElementById("quiz").style.marginLeft = '2em';
-	document.getElementById("quiz").style.marginRight = '2em';
-	document.getElementById("QS").classList.remove('w3-animate-top');
-	document.getElementById("QS").classList.add('w3-animate-right');
-	document.getElementById("QH").classList.remove('w3-animate-top');
-	document.getElementById("QH").classList.add('w3-animate-right');
-	document.getElementById("QB").classList.remove('w3-animate-top');
-	document.getElementById("QB").classList.add('w3-animate-right');
+    document.getElementById("quiz").classList.remove('w3-display-middle');
+    document.getElementById("quiz").classList.add('w3-display-left');
+    document.getElementById("quiz").style.width = '50%';
+    document.getElementById("quiz").style.marginLeft = '2em';
+    document.getElementById("quiz").style.marginRight = '2em';
+    document.getElementById("QS").classList.remove('w3-animate-top');
+    document.getElementById("QS").classList.add('w3-animate-right');
+    document.getElementById("QH").classList.remove('w3-animate-top');
+    document.getElementById("QH").classList.add('w3-animate-right');
+    document.getElementById("QB").classList.remove('w3-animate-top');
+    document.getElementById("QB").classList.add('w3-animate-right');
   }
 }
 
-function nextChange(pMatchMedia){
-  if (pMatchMedia.matches) {
+function nextChange(pMatchMedia)
+{
+  if (pMatchMedia.matches)
+  {
     //小於768時執行的js
-	document.getElementById("answerBlock").classList.remove('w3-teal');
-  }else {
+    document.getElementById("answerBlock").classList.remove('w3-teal');
+  }
+  else
+  {
     //大於768時執行的js
-	document . getElementById ( "quiz" ) . classList . remove ( 'w3-display-left' ) ;
-	document . getElementById ( "quiz" ) . classList . add ( 'w3-display-middle' ) ;
-	document . getElementById ( "QS" ) . classList . remove ( 'w3-animate-right' ) ;
-	document . getElementById ( "QS" ) . classList . add ( 'w3-animate-left' ) ;
-	document . getElementById ( "QH" ) . classList . remove ( 'w3-animate-right' ) ;
-	document . getElementById ( "QH" ) . classList . add ( 'w3-animate-left' ) ;
-	document . getElementById ( "QB" ) . classList . remove ( 'w3-animate-right' ) ;
-	document . getElementById ( "QB" ) . classList . add ( 'w3-animate-left' ) ;
+    document.getElementById("quiz").classList.remove('w3-display-left');
+    document.getElementById("quiz").classList.add('w3-display-middle');
+    document.getElementById("QS").classList.remove('w3-animate-right');
+    document.getElementById("QS").classList.add('w3-animate-left');
+    document.getElementById("QH").classList.remove('w3-animate-right');
+    document.getElementById("QH").classList.add('w3-animate-left');
+    document.getElementById("QB").classList.remove('w3-animate-right');
+    document.getElementById("QB").classList.add('w3-animate-left');
   }
 }
 
@@ -72,14 +93,16 @@ function nextChange(pMatchMedia){
 
 var n = 1;
 
-function quiz(a) {
-	mobileChange();
-	status = "quiz";
+function quiz(a)
+{
+  mobileChange();
+  status = "quiz";
   var situation, options;
-  switch (a) {
+  switch (a)
+  {
     case 1:
-      situation = '超過半數的車禍：';
-      options = ['發生在超過時速60公里的情況', '發生在晚間', '涉及使用機車不到5個月的騎士'];
+      situation = '在白天的時候看到對向車輛有開燈，在不是遠光燈的情況下，代表他做了什麼？';
+      options = ['他可能是個三寶，我要黑特他！', '他睡糊塗了，提醒他記得關燈省電，日行一善。', '代表他有良好行車習慣，有落實全時點燈。'];
       break;
     case 2:
       situation = '東華大學外環車道常有彎道，如果有突發狀況必須減速時我應該';
@@ -87,30 +110,30 @@ function quiz(a) {
       break;
     case 3:
       situation = '東華校內許多路口在地上設有停車再開的標示，如果行車經過時我應該？';
-      options = ['減速慢行，確認路口沒有車輛後快速通過', '查看左右無來車後即可通過', '確實將車輛停下，並確實卻人左右無來車後快速通過', '以上皆是'];
+      options = [ '查看左右無來車後即可通過', '確實將車輛停下，並確實卻人左右無來車後快速通過', '以上皆是'];
       break;
     case 4:
       situation = '東華大學因腹地廣大，有許多不同的交通工具被使用，如果今天在路口遇到行人、腳踏車正要穿越時，我應該？';
       options = ['車輛暫停，禮讓行人', '加速通過，以防車輛回堵', '緩慢通過，禮讓行人', '以上皆是'];
       break;
     case 5:
-      situation = '當跟朋友騎乘機車或是腳踏車在東華校園或是志學街時，千萬不要！';
-      options = ['併排騎車', '騎乘腳踏車時不裝設車燈', '以上皆是'];
+      situation = '當跟朋友在東華校園或是志學街騎乘機車或是腳踏車時，哪個行為會造成別人的困擾！？';
+      options = ['與前車保持適當安全距離', '全時點燈', '並排騎車'];
       break;
     case 6:
-      situation = '終於來到志學街吃飯了，看到左邊有位子要趕快停車，這個時候不能？';
-      options = ['打左轉方向燈，趕快轉彎', '先打左轉方向燈，然後向右靠，等待沒車後轉彎', '以上皆是'];
+      situation = '終於來到志學街吃飯了，看到左邊有位子要趕快停車，我要怎麼做才不會被黑特？';
+      options = ['打左轉方向燈，趕快轉彎', '先打左轉方向燈，然後向右靠，等待沒車後轉彎', '先打左轉方向燈，等待沒車後轉彎'];
       break;
     case 7:
-      situation = '東華校園裡面，好像有減速丘，如過遇到我應該要';
-      options = ['熟記位子，小心通過', '不要加速衝過', '以上皆是'];
+      situation = '當你開心再外環道騎車時，發現對向車輛跟前方車輛一直轉頭看你，同時你在儀表板發現藍色的燈亮的時候，代表機車怎麼了？';
+      options = ['機油黑拉，該換機油了啦', '代表你可能在他們眼裡是三寶', '你的大燈沒有亮，他們人很好想提醒你<3'];
       break;
     case 8:
       situation = '如果在騎車時狗狗很興奮朝你飛奔過來，除了尖叫我應該要？';
       options = ['停止直到動物失去興趣', '從動物旁邊繞過', '慢慢接近動物，然後加快速度離開'];
       break;
     case 9:
-      situation = '欲超車時需要注意什麼';
+      situation = '當前車太慢你想要超車時需要注意什麼？';
       options = ['快速駛離前方駕駛盲區，愈快愈好', '超車時應在速限內以及可行駛區域內', '超車時應保持安全的跟車距離', '以上皆是'];
       break;
     case 10:
@@ -124,33 +147,40 @@ function quiz(a) {
   document.getElementById("optionB").innerHTML = options[1];
   document.getElementById("optionC").innerHTML = options[2];
 
-  if (options.length == 4) {
+  if (options.length == 4)
+  {
     document.getElementById("btnD").style.display = "block";
     document.getElementById("optionD").innerHTML = options[3];
-  } else {
+  }
+  else
+  {
     document.getElementById("btnD").style.display = "none";
   }
 }
 
-function wrong(a, b) {
+function wrong(a, b)
+{
   btnWrongSingle(b);
 
   var reason;
 
-  switch (a) {
+  switch (a)
+  {
     case 1:
-      switch (b) {
+      switch (b)
+      {
         case 'A':
-          reason = '速度不一定是車禍的主因，但還是需要依照速限騎乘';
+          reason = '等等等，不要衝動，你要是這麼PO出來被嘴三寶的是誰我就不保證喔，全時點燈是近年不論政府民間都大力推崇的行車習慣，應該確實落實。';
           break;
         case 'B':
-          reason = '夜晚視線不佳一定要小心行駛，但這不是過半數車禍的主因';
+          reason = '如果想要日行一善，請好好的把你的日行燈打開，確實給我落實全時點燈啦^^';
           break;
       }
       break;
 
     case 2:
-      switch (b) {
+      switch (b)
+      {
         case 'A':
           reason = '此答案不完全正確，條件不允許很可能會打滑';
           break;
@@ -161,21 +191,20 @@ function wrong(a, b) {
       break;
 
     case 3:
-      switch (b) {
+      switch (b)
+      {
         case 'A':
-          reason = '行經路口時減速慢行這件事是沒有錯的，但在設有停車再開的標示時應確實將車輛停妥';
+          reason = '行經無號誌路口時應確認左右有無來車，但在設有停車再開的標示時應確實將車輛停妥';
           break;
-        case 'B':
-          reason = '行經路口時應確認左右有無來車，但在設有停車再開的標示時應確實將車輛停妥';
-          break;
-        case 'D':
+        case 'C':
           reason = '雖然好像看起來都可以，但請再思考一下';
           break;
       }
       break;
 
     case 4:
-      switch (b) {
+      switch (b)
+      {
         case 'B':
           reason = '如果加速通過的話可能會被警察開單，甚至發生車禍導致行人重傷，不要貪圖一時之快，毀了兩個家庭，爸爸麻麻會難過的';
           break;
@@ -189,18 +218,20 @@ function wrong(a, b) {
       break;
 
     case 5:
-      switch (b) {
+      switch (b)
+      {
         case 'A':
-          reason = '是沒錯啦，但答案只有這一個嗎？';
+          reason = '騎車時跟前車保持適當安全距離，才有辦法在緊急狀況發生時有時間反應，怎麼會造成別人ㄉ困擾呢？';
           break;
         case 'B':
-          reason = '是對的啦，但答案只有這一個而已？';
+          reason = '全時點燈可以讓來往車輛看得更清楚，降低車禍的發生，只要不要開啟遠光燈，都不會造成他人的困擾喔，第一題沒認真看ヽ(#`Д´)ﾉ';
           break;
       }
       break;
 
     case 6:
-      switch (b) {
+      switch (b)
+      {
         case 'A':
           reason = '千萬不要打了方向燈馬上轉彎，這樣真的很三寶，打了燈不代表有絕對路權，不過該注意的不只這個';
           break;
@@ -211,18 +242,20 @@ function wrong(a, b) {
       break;
 
     case 7:
-      switch (b) {
+      switch (b)
+      {
         case 'A':
-          reason = '請同學們記住這些地點小心通過。請再看看B';
+          reason = '欸欸欸，機油燈不長這個樣子啦，罰你回去看使用手冊。';
           break;
-        case 'B':
-          reason = '對，不要加速通過喔，會跌倒，很痛。不過A也要注意啦';
+        case 'C':
+          reason = '放心你的大燈確實有亮，但是太亮了……再想想。';
           break;
       }
       break;
 
     case 8:
-      switch (b) {
+      switch (b)
+      {
         case 'A':
           reason = '不對不對，這樣很危險';
           break;
@@ -233,7 +266,8 @@ function wrong(a, b) {
       break;
 
     case 9:
-      switch (b) {
+      switch (b)
+      {
         case 'A':
           reason = '這個答案不錯，但是再想想';
           break;
@@ -247,7 +281,8 @@ function wrong(a, b) {
       break;
 
     case 10:
-      switch (b) {
+      switch (b)
+      {
         case 'A':
           reason = '這是維持隊伍緊密排列又能夠維持安全車距的最佳方式。可是還有其他答案，再試一次';
           break;
@@ -261,48 +296,85 @@ function wrong(a, b) {
   alert('錯囉！\n' + reason);
 }
 
-function check(a, b) {
-  if (a == 1 && b == 'C') {
+function check(a, b)
+{
+  if (a == 1 && b == 'C')
+  {
     correct(1, b);
-  } else if (a == 2 && b == 'C') {
+  }
+  else if (a == 2 && b == 'C')
+  {
     correct(2, b);
-  } else if (a == 3 && b == 'C') {
+  }
+  else if (a == 3 && b == 'B')
+  {
     correct(3, b);
-  } else if (a == 4 && b == 'A') {
+  }
+  else if (a == 4 && b == 'A')
+  {
     correct(4, b);
-  } else if (a == 5 && b == 'C') {
+  }
+  else if (a == 5 && b == 'C')
+  {
     correct(5, b);
-  } else if (a == 6 && b == 'C') {
+  }
+  else if (a == 6 && b == 'C')
+  {
     correct(6, b);
-  } else if (a == 7 && b == 'C') {
+  }
+  else if (a == 7 && b == 'B')
+  {
     correct(7, b);
-  } else if (a == 8 && b == 'C') {
+  }
+  else if (a == 8 && b == 'C')
+  {
     correct(8, b);
-  } else if (a == 9 && b == 'D') {
+  }
+  else if (a == 9 && b == 'D')
+  {
     correct(9, b);
-  } else if (a == 10 && b == 'C') {
+  }
+  else if (a == 10 && b == 'C')
+  {
     correct(10, b);
-  } else {
+  }
+  else
+  {
     wrong(a, b);
   }
 }
 
-function correct(a, b) {
-	status = "correct";
-	mobileChange();
-	btnWrong('A');btnWrong('B');btnWrong('C');btnWrong('D');
-	btnCorrect(b);
-  document . getElementById ( "answer" ) . style . display  =  "block" ;
-  document . getElementById ( "next" ) . disabled  =  false ;
-  document . getElementById ( "next" ) . style . display  =  "block" ;
+function correct(a, b)
+{
+  status = "correct";
+  mobileChange();
+  btnWrong('A');
+  btnWrong('B');
+  btnWrong('C');
+  btnWrong('D');
+  btnCorrect(b);
+  document.getElementById("answer").style.display = "block";
+  document.getElementById("next").disabled = false;
+  document.getElementById("next").style.display = "block";
 
   var explanation = document.getElementById('explanation');
   explanation.innerHTML = '';
-  switch (a) {
+  switch (a)
+  {
     case 1:
-      var p1 = document.createElement('p');
-      p1.appendChild(document.createTextNode('根據警政署統計通報資料顯示，2018年機車肇事件數，以「18歲 – 未滿20歲」年齡層，占道路交通事故總死亡人數比重87.14％。在騎車技巧不夠嫻熟，或對當地路況不熟悉的情況下，意外常常就此帶走生命。台灣交通設計固然有很多缺漏，因此提升道路安全駕駛觀念顯得更為重要，不僅能保護自己也能保護其他用路人。'));
 
+      var p1 = document.createElement('p');
+      var img = document.createElement('img');
+      img.src = 'img/87.jpg';
+      img.style.width = '100%';
+      p1.appendChild(img);
+      p1.appendChild(document.createTextNode('據研究顯示，白天行車開亮前燈，可引起對向來車注意並提高警覺，不但減少12.4%的車禍，並降低24.6%的車禍死亡率。台灣自2017年1月1日起便要求新款式機車強制配備一發動引擎就會自動開啟的晝行燈或頭燈，否則不得出廠領牌。全時點燈不但是台灣的規範，更是世界的趨勢，歐盟早在2011年2月7日起，所有小轎車、小貨車的新車型都必須配備DRL，台灣已經落後6年了！'));
+      p1.appendChild(document.createElement('br'));
+      p1.appendChild(document.createElement('br'));
+      p1.appendChild(document.createTextNode('不論機車、汽車或是腳踏車，都應該落實全時點燈，讓來車不分晝夜都可以清楚的看到你的位置，尤其是腳踏車應該裝設前後車燈，保護自己也保護他人，做一個有良好行車習慣的用路人，不要成為別人口中的三寶。'));
+      p1.appendChild(document.createElement('br'));
+      p1.appendChild(document.createElement('br'));
+      p1.appendChild(document.createTextNode('另外舊款機車雖然沒有啟動引擎就開啟日行燈得設計，但也要在發動引擎後開啟大頭燈，落實全時點燈。惟應該在啟動引擎後再開啟大燈，才可以減少電瓶的磨損。'));
       explanation.appendChild(p1);
       break;
 
@@ -357,7 +429,7 @@ function correct(a, b) {
       img.style.width = '100%';
       p1.appendChild(img);
       p1.appendChild(document.createElement('br'));
-      p1.appendChild(document.createTextNode('不論行駛在東華校內或是志學街時，都不應該併排騎車，並且腳踏車應確實裝設前後車燈，機車應該全時點燈。'));
+      p1.appendChild(document.createTextNode('不論行駛在東華校內或是志學街時，都不應該併排騎車，並排騎車容易造成危險發生車禍，並且腳踏車應確實裝設前後車燈，機車應該全時點燈，請大家好好珍惜生命阿。'));
 
       explanation.appendChild(p1);
       break;
@@ -383,11 +455,14 @@ function correct(a, b) {
     case 7:
       var p1 = document.createElement('p');
       var img = document.createElement('img');
-      img.src = 'img/18.jpg';
+      img.src = 'img/7.png';
       img.style.width = '100%';
       p1.appendChild(img);
       p1.appendChild(document.createElement('br'));
-      p1.appendChild(document.createTextNode('東華校園裡面，外環總共有兩個柏油減速丘(行雲莊往志學門及舊宿往志學門)，請同學們熟記位子，小心通過，不要加速衝過，會跌倒，很痛。'));
+      p1.appendChild(document.createTextNode('這個藍色的小惡魔就是惡名昭彰的遠光燈。'));
+      p1.appendChild(document.createElement('br'));
+      p1.appendChild(document.createTextNode('遠光燈光線較為集中，亮點大，照射距離遠，適合於光源不足的路段使用，但是，若是於會車時使用遠光燈，可能造成對向車道用路人瞬間致盲、對距離的感知力下降等等危害。依道路交通安全使用規則第109條 第一項第六款，於夜間會車或同向前方一百公尺內有車輛行駛時，不得使用遠光燈。'));
+
 
       explanation.appendChild(p1);
       break;
@@ -440,55 +515,70 @@ function correct(a, b) {
   }
 }
 
-function next() {
-	status = "quiz";
-    if  ( n != 10 )  {
-		document . getElementById ( "next" ) . disabled  =  true ;
-		quiz ( n  +=  1 ) ;
-		mobileChange();
-		document . getElementById ( "quiz" ) . style . width  =  null ;
-		document . getElementById ( "quiz" ) . style . marginLeft  =  null ;
-		document . getElementById ( "quiz" ) . style . marginRight  =  null ;
-		document . getElementById ( "answer" ) . style . display  =  "none" ;
-		document . getElementById ( "next" ) . style . display  =  "none" ;
-		btnReset('A');btnReset('B');btnReset('C');btnReset('D');
-    if (n == 10) {
+function next()
+{
+  status = "quiz";
+  if (n != 10)
+  {
+    document.getElementById("next").disabled = true;
+    quiz(n += 1);
+    mobileChange();
+    document.getElementById("quiz").style.width = null;
+    document.getElementById("quiz").style.marginLeft = null;
+    document.getElementById("quiz").style.marginRight = null;
+    document.getElementById("answer").style.display = "none";
+    document.getElementById("next").style.display = "none";
+    btnReset('A');
+    btnReset('B');
+    btnReset('C');
+    btnReset('D');
+    if (n == 10)
+    {
       document.getElementById('next').innerHTML = '完成';
     }
-  } else {
-    alert('請登入學校信箱');
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLSerqNhZhWVzBcmbEiXFgbZ_4TR0xMwAD1VMLUGA-kjtmy3JKA/viewform?usp=sf_link', '_self');
+  }
+  else
+  {
+    document.getElementById("answer").style.display = "none";
+    document.getElementById("next").style.display = "none";
+    document.getElementById('answerBlock').style.display = 'none';
+    document.getElementById('quiz').style.display = "none";
+    document.getElementById('feedback').style.display = 'block';
   }
 }
 
-function btnReset(b){
-	var btn = "btn" + b;
-	document.getElementById(btn).classList.add("w3-pale-green");
-	document.getElementById(btn).classList.add("w3-hover-blue-grey");
-	document.getElementById(btn).classList.remove("w3-pale-red");
-	document.getElementById(btn).classList.remove("w3-gray");
+function btnReset(b)
+{
+  var btn = "btn" + b;
+  document.getElementById(btn).classList.add("w3-pale-green");
+  document.getElementById(btn).classList.add("w3-hover-blue-grey");
+  document.getElementById(btn).classList.remove("w3-pale-red");
+  document.getElementById(btn).classList.remove("w3-gray");
 }
 
-function btnWrongSingle(b){
-	var btn = "btn" + b;
-	document.getElementById(btn).classList.remove("w3-pale-green");
-	document.getElementById(btn).classList.remove("w3-hover-blue-grey");
-	document.getElementById(btn).classList.add("w3-pale-red");
+function btnWrongSingle(b)
+{
+  var btn = "btn" + b;
+  document.getElementById(btn).classList.remove("w3-pale-green");
+  document.getElementById(btn).classList.remove("w3-hover-blue-grey");
+  document.getElementById(btn).classList.add("w3-pale-red");
 }
 
-function btnWrong(b){
-	var btn = "btn" + b;
-	document.getElementById(btn).classList.remove("w3-pale-green");
-	document.getElementById(btn).classList.remove("w3-pale-red");
-	document.getElementById(btn).classList.remove("w3-hover-blue-grey");
-	document.getElementById(btn).classList.add("w3-gray");
+function btnWrong(b)
+{
+  var btn = "btn" + b;
+  document.getElementById(btn).classList.remove("w3-pale-green");
+  document.getElementById(btn).classList.remove("w3-pale-red");
+  document.getElementById(btn).classList.remove("w3-hover-blue-grey");
+  document.getElementById(btn).classList.add("w3-gray");
 }
 
-function btnCorrect(b){
-	var btn = "btn" + b;
-	document.getElementById(btn).classList.add("w3-lime");
-	document.getElementById(btn).classList.remove("w3-pale-green");
-	document.getElementById(btn).classList.remove("w3-gray");
-	document.getElementById(btn).classList.remove("w3-pale-red");
-	document.getElementById(btn).classList.remove("w3-hover-blue-grey");
+function btnCorrect(b)
+{
+  var btn = "btn" + b;
+  document.getElementById(btn).classList.add("w3-lime");
+  document.getElementById(btn).classList.remove("w3-pale-green");
+  document.getElementById(btn).classList.remove("w3-gray");
+  document.getElementById(btn).classList.remove("w3-pale-red");
+  document.getElementById(btn).classList.remove("w3-hover-blue-grey");
 }
