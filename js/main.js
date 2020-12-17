@@ -1,5 +1,5 @@
 // RWD START
-var status = "quiz";
+var status = 'quiz';
 mobileChange();
 window.onresize = function()
 {
@@ -8,31 +8,31 @@ window.onresize = function()
 
 function mobileChange()
 {
-  var pMatchMedia = window.matchMedia("(max-width: 768px)");
-  if (status == "correct")
+  var pMatchMedia = window.matchMedia('(max-width: 768px)');
+  if (status == 'correct')
   {
     correctChange(pMatchMedia);
   }
-  if (status == "quiz")
+  if (status == 'quiz')
   {
     nextChange(pMatchMedia);
   }
   if (pMatchMedia.matches)
   {
     //小於768時執行的js
-    document.getElementById("answer").classList.remove('w3-display-right');
-    document.getElementById("answer").classList.remove('ansPC');
-    document.getElementById("quiz").classList.remove('w3-display-middle');
-    document.getElementById("safooter").classList.remove('bottomleft');
+    document.getElementById('answer').classList.remove('w3-display-right');
+    document.getElementById('answer').classList.remove('ansPC');
+    document.getElementById('quiz').classList.remove('w3-display-middle');
+    document.getElementById('safooter').classList.remove('bottomleft');
   }
   else
   {
     //大於768時執行的js
-    document.getElementById("answer").classList.add('w3-display-right');
-    document.getElementById("answer").classList.add('ansPC');
-    document.getElementById("quiz").classList.add('w3-display-middle');
-    document.getElementById("safooter").classList.add('bottomleft');
-    document.getElementById("answerBlock").classList.remove('w3-teal');
+    document.getElementById('answer').classList.add('w3-display-right');
+    document.getElementById('answer').classList.add('ansPC');
+    document.getElementById('quiz').classList.add('w3-display-middle');
+    document.getElementById('safooter').classList.add('bottomleft');
+    document.getElementById('answerBlock').classList.remove('w3-teal');
   }
 }
 
@@ -42,28 +42,31 @@ function correctChange(pMatchMedia)
   {
     //小於768時執行的js
     scrollTo(0, 0);
-    document.getElementById("answerBlock").classList.add('w3-teal');
-    document.getElementById("quiz").classList.remove('w3-display-left');
-    document.getElementById("QS").classList.remove('w3-animate-right');
-    document.getElementById("QB").classList.remove('w3-animate-right');
-    document.getElementById("quiz").style.width = '100%';
-    document.getElementById("quiz").style.marginLeft = '0';
-    document.getElementById("quiz").style.marginRight = '0';
+    document.getElementById('answerBlock').classList.add('w3-teal');
+    document.getElementById('quiz').classList.remove('w3-display-left');
+    document.getElementById('bar').classList.remove('w3-animate-right');
+    document.getElementById('QS').classList.remove('w3-animate-right');
+    document.getElementById('QB').classList.remove('w3-animate-right');
+    document.getElementById('quiz').style.width = '100%';
+    document.getElementById('quiz').style.marginLeft = '0';
+    document.getElementById('quiz').style.marginRight = '0';
   }
   else
   {
     //大於768時執行的js
-    document.getElementById("quiz").classList.remove('w3-display-middle');
-    document.getElementById("quiz").classList.add('w3-display-left');
-    document.getElementById("quiz").style.width = '50%';
-    document.getElementById("quiz").style.marginLeft = '2em';
-    document.getElementById("quiz").style.marginRight = '2em';
-    document.getElementById("QS").classList.remove('w3-animate-top');
-    document.getElementById("QS").classList.add('w3-animate-right');
-    document.getElementById("QH").classList.remove('w3-animate-top');
-    document.getElementById("QH").classList.add('w3-animate-right');
-    document.getElementById("QB").classList.remove('w3-animate-top');
-    document.getElementById("QB").classList.add('w3-animate-right');
+    document.getElementById('quiz').classList.remove('w3-display-middle');
+    document.getElementById('quiz').classList.add('w3-display-left');
+    document.getElementById('quiz').style.width = '50%';
+    document.getElementById('quiz').style.marginLeft = '2em';
+    document.getElementById('quiz').style.marginRight = '2em';
+    document.getElementById('bar').classList.remove('w3-animate-top');
+    document.getElementById('bar').classList.add('w3-animate-right');
+    document.getElementById('QS').classList.remove('w3-animate-top');
+    document.getElementById('QS').classList.add('w3-animate-right');
+    document.getElementById('QH').classList.remove('w3-animate-top');
+    document.getElementById('QH').classList.add('w3-animate-right');
+    document.getElementById('QB').classList.remove('w3-animate-top');
+    document.getElementById('QB').classList.add('w3-animate-right');
   }
 }
 
@@ -72,19 +75,21 @@ function nextChange(pMatchMedia)
   if (pMatchMedia.matches)
   {
     //小於768時執行的js
-    document.getElementById("answerBlock").classList.remove('w3-teal');
+    document.getElementById('answerBlock').classList.remove('w3-teal');
   }
   else
   {
     //大於768時執行的js
-    document.getElementById("quiz").classList.remove('w3-display-left');
-    document.getElementById("quiz").classList.add('w3-display-middle');
-    document.getElementById("QS").classList.remove('w3-animate-right');
-    document.getElementById("QS").classList.add('w3-animate-left');
-    document.getElementById("QH").classList.remove('w3-animate-right');
-    document.getElementById("QH").classList.add('w3-animate-left');
-    document.getElementById("QB").classList.remove('w3-animate-right');
-    document.getElementById("QB").classList.add('w3-animate-left');
+    document.getElementById('quiz').classList.remove('w3-display-left');
+    document.getElementById('quiz').classList.add('w3-display-middle');
+    document.getElementById('bar').classList.remove('w3-animate-right');
+    document.getElementById('bar').classList.add('w3-animate-left');
+    document.getElementById('QS').classList.remove('w3-animate-right');
+    document.getElementById('QS').classList.add('w3-animate-left');
+    document.getElementById('QH').classList.remove('w3-animate-right');
+    document.getElementById('QH').classList.add('w3-animate-left');
+    document.getElementById('QB').classList.remove('w3-animate-right');
+    document.getElementById('QB').classList.add('w3-animate-left');
   }
 }
 
@@ -96,7 +101,7 @@ var n = 1;
 function quiz(a)
 {
   mobileChange();
-  status = "quiz";
+  status = 'quiz';
   var situation, options;
   switch (a)
   {
@@ -110,7 +115,7 @@ function quiz(a)
       break;
     case 3:
       situation = '東華校內許多路口在地上設有停車再開的標示，如果行車經過時我應該？';
-      options = [ '查看左右無來車後即可通過', '確實將車輛停下，並確實確認左右無來車後快速通過', '以上皆是'];
+      options = ['查看左右無來車後即可通過', '確實將車輛停下，並確實確認左右無來車後快速通過', '以上皆是'];
       break;
     case 4:
       situation = '東華大學因腹地廣大，有許多不同的交通工具被使用，如果今天在路口遇到行人、腳踏車正要穿越時，我應該？';
@@ -142,19 +147,21 @@ function quiz(a)
       break;
   }
 
-  document.getElementById("situation").innerHTML = situation;
-  document.getElementById("optionA").innerHTML = options[0];
-  document.getElementById("optionB").innerHTML = options[1];
-  document.getElementById("optionC").innerHTML = options[2];
+  document.getElementById('situation').innerHTML = situation;
+  document.getElementById('optionA').innerHTML = options[0];
+  document.getElementById('optionB').innerHTML = options[1];
+  document.getElementById('optionC').innerHTML = options[2];
+  document.getElementById('progress').innerHTML = a;
+  document.getElementById('progressBar').style.width = (a * 10) + '%';
 
   if (options.length == 4)
   {
-    document.getElementById("btnD").style.display = "block";
-    document.getElementById("optionD").innerHTML = options[3];
+    document.getElementById('btnD').style.display = 'block';
+    document.getElementById('optionD').innerHTML = options[3];
   }
   else
   {
-    document.getElementById("btnD").style.display = "none";
+    document.getElementById('btnD').style.display = 'none';
   }
 }
 
@@ -346,16 +353,16 @@ function check(a, b)
 
 function correct(a, b)
 {
-  status = "correct";
+  status = 'correct';
   mobileChange();
   btnWrong('A');
   btnWrong('B');
   btnWrong('C');
   btnWrong('D');
   btnCorrect(b);
-  document.getElementById("answer").style.display = "block";
-  document.getElementById("next").disabled = false;
-  document.getElementById("next").style.display = "block";
+  document.getElementById('answer').style.display = 'block';
+  document.getElementById('next').disabled = false;
+  document.getElementById('next').style.display = 'block';
 
   var explanation = document.getElementById('explanation');
   explanation.innerHTML = '';
@@ -517,17 +524,17 @@ function correct(a, b)
 
 function next()
 {
-  status = "quiz";
+  status = 'quiz';
   if (n != 10)
   {
-    document.getElementById("next").disabled = true;
+    document.getElementById('next').disabled = true;
     quiz(n += 1);
     mobileChange();
-    document.getElementById("quiz").style.width = null;
-    document.getElementById("quiz").style.marginLeft = null;
-    document.getElementById("quiz").style.marginRight = null;
-    document.getElementById("answer").style.display = "none";
-    document.getElementById("next").style.display = "none";
+    document.getElementById('quiz').style.width = null;
+    document.getElementById('quiz').style.marginLeft = null;
+    document.getElementById('quiz').style.marginRight = null;
+    document.getElementById('answer').style.display = 'none';
+    document.getElementById('next').style.display = 'none';
     btnReset('A');
     btnReset('B');
     btnReset('C');
@@ -539,46 +546,46 @@ function next()
   }
   else
   {
-    document.getElementById("answer").style.display = "none";
-    document.getElementById("next").style.display = "none";
+    document.getElementById('answer').style.display = 'none';
+    document.getElementById('next').style.display = 'none';
     document.getElementById('answerBlock').style.display = 'none';
-    document.getElementById('quiz').style.display = "none";
+    document.getElementById('quiz').style.display = 'none';
     document.getElementById('feedback').style.display = 'block';
   }
 }
 
 function btnReset(b)
 {
-  var btn = "btn" + b;
-  document.getElementById(btn).classList.add("w3-pale-green");
-  document.getElementById(btn).classList.add("w3-hover-blue-grey");
-  document.getElementById(btn).classList.remove("w3-pale-red");
-  document.getElementById(btn).classList.remove("w3-gray");
+  var btn = 'btn' + b;
+  document.getElementById(btn).classList.add('w3-pale-green');
+  document.getElementById(btn).classList.add('w3-hover-blue-grey');
+  document.getElementById(btn).classList.remove('w3-pale-red');
+  document.getElementById(btn).classList.remove('w3-gray');
 }
 
 function btnWrongSingle(b)
 {
-  var btn = "btn" + b;
-  document.getElementById(btn).classList.remove("w3-pale-green");
-  document.getElementById(btn).classList.remove("w3-hover-blue-grey");
-  document.getElementById(btn).classList.add("w3-pale-red");
+  var btn = 'btn' + b;
+  document.getElementById(btn).classList.remove('w3-pale-green');
+  document.getElementById(btn).classList.remove('w3-hover-blue-grey');
+  document.getElementById(btn).classList.add('w3-pale-red');
 }
 
 function btnWrong(b)
 {
-  var btn = "btn" + b;
-  document.getElementById(btn).classList.remove("w3-pale-green");
-  document.getElementById(btn).classList.remove("w3-pale-red");
-  document.getElementById(btn).classList.remove("w3-hover-blue-grey");
-  document.getElementById(btn).classList.add("w3-gray");
+  var btn = 'btn' + b;
+  document.getElementById(btn).classList.remove('w3-pale-green');
+  document.getElementById(btn).classList.remove('w3-pale-red');
+  document.getElementById(btn).classList.remove('w3-hover-blue-grey');
+  document.getElementById(btn).classList.add('w3-gray');
 }
 
 function btnCorrect(b)
 {
-  var btn = "btn" + b;
-  document.getElementById(btn).classList.add("w3-lime");
-  document.getElementById(btn).classList.remove("w3-pale-green");
-  document.getElementById(btn).classList.remove("w3-gray");
-  document.getElementById(btn).classList.remove("w3-pale-red");
-  document.getElementById(btn).classList.remove("w3-hover-blue-grey");
+  var btn = 'btn' + b;
+  document.getElementById(btn).classList.add('w3-lime');
+  document.getElementById(btn).classList.remove('w3-pale-green');
+  document.getElementById(btn).classList.remove('w3-gray');
+  document.getElementById(btn).classList.remove('w3-pale-red');
+  document.getElementById(btn).classList.remove('w3-hover-blue-grey');
 }
